@@ -49,6 +49,8 @@
   // This is the promise object itself
   function defer(){
 
+    this.promise = this;   // make compatible with when.js defer.promise. NF 12/08/2013
+
     // State transitions from pending to either resolved or rejected
     this.state = 'pending'
 
